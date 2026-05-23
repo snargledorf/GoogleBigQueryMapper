@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/BigQueryMapper/BigQueryMapper.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/BigQueryMapper.Tests/BigQueryMapper.Tests.csproj" />
+  </Folder>
+</Solution>
