@@ -24,5 +24,11 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
+    - name: Set project id
+      run: dotnet user-secrets set "projectId" "${{secrets.PROJECTID}}" --project "tests/BigQueryMapper.Tests"
+    - name: Authenticate to Google Cloud
+      uses: google-github-actions/auth@v3
+      with:
+        credentials_json: '${{ secrets.GOOGLE_CLOUD_KEY }}'
     - name: Test
       run: dotnet test --no-build --verbosity normal
